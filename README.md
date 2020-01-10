@@ -1,6 +1,6 @@
 # Calculateur de charge glycémique
 
-## Etape 0 : Création de l'application
+## Installation
 
 Il vous suffit de cloner mon repository :wink:
 
