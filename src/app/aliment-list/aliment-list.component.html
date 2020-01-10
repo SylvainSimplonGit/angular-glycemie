@@ -1,0 +1,45 @@
+<h1>Liste des aliments</h1>
+<div class="zoneForm">
+  <h1>Formulaire d'ajout</h1>
+  <form [formGroup]="createAlimentForm" (ngSubmit)="addAliment(createAlimentForm.value)">
+    <div class="field spaceBetween">
+      <label for="name">Nom de l'aliment : </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+    <div class="field spaceBetween">
+      <label for="ig">Index Glycémique : </label>
+      <input id="ig" type="number" formControlName="ig" min="0" max="200" step="1">
+    </div>
+    <div class="field spaceBetween">
+      <label for="carbs">Proportion de glucides (g/100g) :</label>
+      <input id="carbs" type="number" formControlName="carbs" min="0" max="100" step="1">
+    </div>
+    <div class="field center">
+      <button class="button" type="submit">Ajouter</button>
+    </div>
+  </form>
+</div>
+
+<div class="zoneListe">
+  <h1>Liste des aliments enregistrés</h1>
+  <div class="liste center">
+    <table>
+      <thead>
+        <tr>
+          <td>Nom de l'aliment</td>
+          <td>index glycémique</td>
+          <td>Proportion de glucides (g/100g)</td>
+          <td>Supprimer</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let aliment of aliments">
+          <td>{{ aliment.name }}</td>
+          <td>{{ aliment.ig }}</td>
+          <td>{{ aliment.carbs }}</td>
+          <td><button (click)="removeAliment(aliment)">Supprimer</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

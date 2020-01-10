@@ -1,0 +1,17 @@
+.charge {
+  display: flex;
+  flex-direction: row;
+  font-size: var(--height-large);
+  font-weight: bold;
+}
+
+.chargeLabel {
+  margin: 0.2rem 1rem;
+  align-self: flex-end;
+}
+
+.chargeValue {
+  margin: 0rem 1rem;
+  font-size: var(--height-xlarge);
+  color: var(--color-text-charge-alert);
+}

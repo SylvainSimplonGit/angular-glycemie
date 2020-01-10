@@ -1,0 +1,19 @@
+.top-menu {
+  position: fixed;
+  top: 0rem;
+  width: 100%;
+  background-color: var(--color-menu-top);
+  color: var(--color-text-menu);
+}
+
+.menu {
+  background-color: var(--color-menu-bottom);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.menuItem {
+  padding: 0.5rem;
+  font-size: var(--height-normal);
+}

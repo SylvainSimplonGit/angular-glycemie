@@ -1,1 +1,174 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(/assets/fonts/SourceSansPro-Regular.ttf) format('truetype');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(/assets/fonts/SourceSansPro-Regular.ttf) format('truetype');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(/assets/fonts/SourceSansPro-Regular.ttf) format('truetype');
+  unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(/assets/fonts/SourceSansPro-Regular.ttf) format('truetype');
+  unicode-range: U+0370-03FF;
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(/assets/fonts/SourceSansPro-Regular.ttf) format('truetype');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(/assets/fonts/SourceSansPro-Regular.ttf) format('truetype');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(/assets/fonts/SourceSansPro-Regular.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --color-menu-top: #e43f6f;
+  --color-menu-bottom: #f56476;
+  --color-primary: #546a76;
+  --color-secondary: #88a0a8;
+  --color-border: #dfbbb1;
+  --color-text-menu: black;
+  --color-text: white;
+  --color-text-charge-good: #35c4c4;
+  --color-text-charge-alert: #eecd3b;
+  --height-xlarge: 2rem;
+  --height-large: 1.5rem;
+  --height-normal: 1.1rem;
+  --height-small: .8rem;
+}
+
+body {
+  font-family: 'Source Sans Pro Regular', sans-serif;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  font-size: var(--height-large);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+	align-self: center;
+  margin: 0.5rem;
+	width: 95%;
+	border-collapse: collapse;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-border);
+	text-align: center;
+}
+
+thead {
+  border:1px solid var(--color-primary); /* #566963; */
+	font-weight:bold;
+}
+
+td {
+  border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-border);
+	padding: 5px;
+	font-size: var(--height-normal);
+}
+
+.zoneForm,
+.zoneListe {
+  background-color: var(--color-secondary);
+  margin: 1rem 0rem;
+}
+
+.field {
+  padding: 0.2rem 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+}
+
+.liste {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  font-size: var(--height-normal);
+  font-weight:bold;
+}
+
+input {
+  font-size: var(--height-normal);
+}
+
+button {
+  font-size: var(--height-large);
+  width: 80%;
+}
+
+td button {
+  font-size: var(--height-small);
+  width: 100%;
+}

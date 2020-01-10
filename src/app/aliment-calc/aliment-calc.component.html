@@ -1,0 +1,50 @@
+<h1>Calculateur</h1>
+
+<div class="zoneForm">
+  <h1>Définition des portions</h1>
+  <form [formGroup]="addAlimentCalcForm" (ngSubmit)="addAlimentCalc(addAlimentCalcForm.value)">
+    <div class="field center">
+      <label for="selectName">Aliment :</label>
+      <select id="selectName" formControlName="aliment">
+        <option *ngFor="let aliment of aliments" [ngValue]="aliment">
+          {{ aliment.name }}
+        </option>
+      </select>
+      <label for="inputPortion">Portion (g) :</label>
+      <input id="inputPortion" formControlName="portion" type="number" min="0" step="1">
+    </div>
+    <div class="field center">
+      <button class="button" type="submit">Ajouter</button>
+    </div>
+  </form>
+</div>
+
+<div class="zoneListe">
+  <div class="charge center">
+    <div class="chargeLabel">Charge totale : </div>
+    <div class="chargeValue">{{ chargeTotal | number: '1.2-2'}}</div>
+  </div>
+  <h1>Liste des portions ajoutées</h1>
+  <div class="liste center">
+    <table>
+      <thead>
+        <tr>
+          <td>Nom de l'aliment</td>
+          <td>index glycémique</td>
+          <td>Proportion de glucides (g)</td>
+          <td>Charge glycémique calculée</td>
+          <td>Supprimer</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let portion of portions">
+          <td>{{ portion.aliment.name }}</td>
+          <td>{{ portion.aliment.ig | number : '1.0-2' }}</td>
+          <td>{{ portion.propCarbs | number : '1.2-2'}}</td>
+          <td>{{ portion.chargeGlyc | number : '1.2-2'}}</td>
+          <td><button (click)="removePortion(portion)">Supprimer</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
