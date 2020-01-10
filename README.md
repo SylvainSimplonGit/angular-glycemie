@@ -52,7 +52,7 @@ Prérequis : [Installation de l'environnement Angular](https://angular.io/guide/
 - Sauvegardez toutes les données dans le local storage
 - Créez un composant pour affichez la liste des repas enregistrés
 
-## Reste à faire
+## Avancement
 
 ### Affichage de la liste des aliments
 
